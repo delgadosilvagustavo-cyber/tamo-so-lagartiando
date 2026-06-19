@@ -9,3 +9,7 @@ try
 {
     $pdo = new PDO("myslq:host=$host;dbname=$dbname", $usuario, $senha);
 }
+catch(PDOException $e)
+{
+    echo $e->getMessage();
+}
