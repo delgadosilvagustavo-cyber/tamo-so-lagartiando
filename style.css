@@ -1,61 +1,96 @@
-/* Configuração Geral */
+/* 1. Configuração Geral */
 body {
-    font-family: 'Segoe UI', tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5; /* Fundo suave */
-    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Fundo suave */ 
+    display: flex; 
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    justify-content: center; 
+    height: 100vh; 
+    margin: 0; 
 }
 
 /* Título */
 h3 {
-    color: #333;
-    margin-bottom: 15px;
+    color: #333; 
+    margin-bottom: 15px; 
 }
 
-/* Estilização da Àrea de Texto */
-testarea {
-    width: 350px;
-    height: 150px;
-    padding: 15px;
-    border: 2px solid #ddd;
-    border-radius: 12px; /* Bordas arredondadas */
-    font-size: 16px;
-    resize: none; /* Impede o usuário de deformar o layout */
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    background-color: #ffffff;
+/* Estilização do Formulário */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 380px;
 }
 
-/*Efeito de foco no Textarea */
-textarea:focus{
-    border-color: #4A90E2;
-    box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
-}
-
-/* Estilização do Botão */
-button {
-    margin-top: 20px;
-    background-color: #4A90E2;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 16px;
+label {
     font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Inputs de Texto e Data */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+    width: 100%; /* Ajustado para caber no container */
+    padding: 10px;
+    border: 2px solid #ddd; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    outline: none; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+}
+
+/* Estilização específica da Área de Texto */
+textarea {
+    height: 100px; 
+    resize: none; /* Impede o usuário de deformar o layout */ 
+    margin-top: 15px;
+}
+
+/* Foco nos Inputs e Textarea */
+input:focus, textarea:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.2); 
+}
+
+/* Alinhamento dos Radios */
+div.gender-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/* Botão Salvar */
+button {
+    margin-top: 20px; 
+    background-color: #4A90E2;
+    color: white; 
+    border: none; 
+    padding: 12px 30px;
+    font-size: 16px; 
+    font-weight: bold; 
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 /* Efeitos no Botão */
 button:hover {
-    background-color: #357ABD;
+    background-color: #357ABD; 
     transform: translateY(-2px); /* Efeito de levante */
-} 
+}
 
 button:active {
     transform: translateY(0);
